@@ -1,0 +1,32 @@
+# Ignore environment files
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+legal_chatbot/
+venv/
+env/
+ENV/
+
+# Temporary audio files
+temp_audio/
+scripts/voice_outputs/*.mp3
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

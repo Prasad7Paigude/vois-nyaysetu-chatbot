@@ -1,0 +1,23 @@
+# Render Deployment Configuration
+# This file is for documentation purposes
+
+# BUILD COMMAND (in Render dashboard):
+pip install -r requirements.txt
+
+# START COMMAND (in Render dashboard):
+uvicorn main:app --host 0.0.0.0 --port 10000
+
+# ENVIRONMENT VARIABLES (set in Render dashboard):
+# OPENAI_API_KEY=your_openrouter_api_key_here
+# OPENAI_BASE_URL=https://openrouter.ai/api/v1
+# PORT=10000 (automatically set by Render)
+
+# HEALTH CHECK PATH:
+# /health
+
+# DEPLOYMENT NOTES:
+# - No Docker required
+# - Use Python 3.11+ runtime
+# - Auto-deploy on git push
+# - Vector DB (chroma_day1) is included in repo
+# - Cold start time: ~10-20 seconds
