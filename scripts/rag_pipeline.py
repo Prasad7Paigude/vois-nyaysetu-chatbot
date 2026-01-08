@@ -1,5 +1,3 @@
-print(">>> LOADED rag_pipeline.py FROM:", __file__)
-
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -71,7 +69,6 @@ def detect_document_type(query: str) -> str | None:
     for doc_key, keywords in DOCUMENT_MAP.items():
         for kw in keywords:
             if kw in query:
-                print(">>> detect_document_type matched:", doc_key)
                 return doc_key
 
     return None
@@ -81,8 +78,6 @@ def detect_document_type(query: str) -> str | None:
 # Document Explanation Handler (PHASE 3 WRAPPED)
 # -------------------------------------------------
 def handle_document_explanation(user_query: str) -> str:
-    print(">>> ENTERED handle_document_explanation()")
-
     document_key = detect_document_type(user_query)
 
     if not document_key or document_key not in DOCUMENT_TEMPLATES:

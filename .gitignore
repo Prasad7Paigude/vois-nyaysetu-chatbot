@@ -1,32 +1,63 @@
-# Ignore environment files
+# =========================
+# Environment & Secrets
+# =========================
 .env
+.env.*
+*.env
 
-# Python
+# =========================
+# Python Cache / Artifacts
+# =========================
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
 
-# Virtual environments
-legal_chatbot/
+# =========================
+# Virtual Environments
+# =========================
 venv/
 env/
 ENV/
+.venv/
+legal_chatbot/
 
-# Temporary audio files
+# =========================
+# Voice / Audio (REMOVED FEATURE)
+# =========================
+scripts/voice_*
+scripts/voice_outputs/
 temp_audio/
-scripts/voice_outputs/*.mp3
 
-# IDE
+# =========================
+# Tests (not needed in prod backend)
+# =========================
+scripts/test_*
+tests/
+
+# =========================
+# IDE / Editor
+# =========================
 .vscode/
 .idea/
 *.swp
 *.swo
+*.swn
 
-# OS
+# =========================
+# OS Files
+# =========================
 .DS_Store
 Thumbs.db
 
-# Logs
+# =========================
+# Logs & Runtime Files
+# =========================
 *.log
+
+# =========================
+# Build / Cache
+# =========================
+.cache/
+pip-wheel-metadata/

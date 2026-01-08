@@ -16,8 +16,11 @@ uvicorn main:app --host 0.0.0.0 --port 10000
 # /health
 
 # DEPLOYMENT NOTES:
+# - Memory optimized for 512 MB tier
+# - Text-only chatbot (audio features removed)
+# - Lazy loading of heavy components (embeddings, vector DB)
 # - No Docker required
 # - Use Python 3.11+ runtime
 # - Auto-deploy on git push
 # - Vector DB (chroma_day1) is included in repo
-# - Cold start time: ~10-20 seconds
+# - Cold start time: ~5-10 seconds (optimized)
